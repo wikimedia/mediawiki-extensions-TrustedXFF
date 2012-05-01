@@ -454,10 +454,11 @@ $messages['sr-ec'] = array(
 );
 
 /** Serbian (Latin script) (‪Srpski (latinica)‬)
+ * @author MaxSem
  * @author Michaello
  */
 $messages['sr-el'] = array(
-	'trustedxff-desc' => 'Upravljanje spiskom proksi adresa kojima se veruje ([<a href="http://meta.wikimedia.org/wiki/XFF_project">http://meta.wikimedia.org/wiki/XFF_project</a> XFF project])',
+	'trustedxff-desc' => 'Upravljanje spiskom proksi adresa kojima se veruje ([http://meta.wikimedia.org/wiki/XFF_project XFF project])',
 );
 
 /** Seeltersk (Seeltersk)
