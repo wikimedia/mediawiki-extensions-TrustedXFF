@@ -548,6 +548,7 @@ accel110.iad.untd.com.
 
 # Opera Mini
 # Source: https://list.opera.com/mailman/listinfo/net-changes-mini
+59.151.95.128/25
 59.151.98.128/27
 59.151.106.224/27
 59.151.120.32/27
@@ -561,6 +562,7 @@ accel110.iad.untd.com.
 195.189.142.0/23
 203.81.19.0/24
 209.170.68.0/24
+217.212.226.0/24
 217.212.230.0/23
 
 # True Internet (Thailand)
