@@ -48,7 +48,7 @@ $messages['ba'] = array(
 	'trustedxff-desc' => 'Ышаныслы прокси адрестар исемлеген эшкәртеү ([http://meta.wikimedia.org/wiki/XFF_project XFF проекты])',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -92,7 +92,7 @@ $messages['diq'] = array(
 	'trustedxff-desc' => "tehqiqatê listeya adresê proxya bawerbiyayeyan ([http://meta.wikimedia.org/wiki/XFF_project projeyê XFF'i])",
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -163,7 +163,7 @@ $messages['frp'] = array(
 	'trustedxff-desc' => "Administracion d’una lista d’adrèces de sèrvors mandatèros (''proxies'') de fiance ([http://meta.wikimedia.org/wiki/XFF_project projèt XFF])",
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -198,7 +198,7 @@ $messages['hr'] = array(
 	'trustedxff-desc' => 'Omogućava stvaranje popisa odobrenih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekt])',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -404,7 +404,7 @@ $messages['ru'] = array(
 	'trustedxff-desc' => 'Обработка списка доверенных прокси-адресов ([http://meta.wikimedia.org/wiki/XFF_project Проект XFF])',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
