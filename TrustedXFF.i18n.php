@@ -41,7 +41,7 @@ $messages['ast'] = array(
 	'trustedxff-desc' => "Xestión d'una llista de direiciones proxy d'enfotu ([http://meta.wikimedia.org/wiki/XFF_project proyeutu XFF])",
 );
 
-/** Bashkir (Башҡортса)
+/** Bashkir (башҡортса)
  * @author Assele
  */
 $messages['ba'] = array(
@@ -311,9 +311,7 @@ $messages['ms'] = array(
 	'trustedxff-desc' => 'Pengendalian senarai alamat proksi yang dipercayai ([http://meta.wikimedia.org/wiki/XFF_project projek XFF])',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
- */
+/** Norwegian Bokmål (‪norsk (bokmål)‬) */
 $messages['nb'] = array(
 	'trustedxff-desc' => 'Behandling av en liste over pålitelige proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-prosjektet])',
 );
