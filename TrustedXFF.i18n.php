@@ -48,7 +48,7 @@ $messages['ba'] = array(
 	'trustedxff-desc' => 'Ышаныслы прокси адрестар исемлеген эшкәртеү ([http://meta.wikimedia.org/wiki/XFF_project XFF проекты])',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -311,7 +311,7 @@ $messages['ms'] = array(
 	'trustedxff-desc' => 'Pengendalian senarai alamat proksi yang dipercayai ([http://meta.wikimedia.org/wiki/XFF_project projek XFF])',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬) */
+/** Norwegian Bokmål (norsk (bokmål)‎) */
 $messages['nb'] = array(
 	'trustedxff-desc' => 'Behandling av en liste over pålitelige proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-prosjektet])',
 );
@@ -337,7 +337,7 @@ $messages['nl'] = array(
 	'trustedxff-desc' => 'Beheert een lijst met adressen van vertrouwde proxyservers ([http://meta.wikimedia.org/wiki/XFF_project XFF-project])',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Frokor
  */
 $messages['nn'] = array(
@@ -444,14 +444,14 @@ $messages['sq'] = array(
 	'trustedxff-desc' => 'Mirëmbajtja e listës së adresave Proxy ([http://meta.wikimedia.org/wiki/XFF_project projekti XFF])',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
 	'trustedxff-desc' => 'Управљање списком прокси адреса којима се верује ([http://meta.wikimedia.org/wiki/XFF_project XFF project])',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author MaxSem
  * @author Michaello
  */
@@ -515,7 +515,7 @@ $messages['yue'] = array(
 	'trustedxff-desc' => '處理一個可信嘅Proxy地址一覽 ([http://meta.wikimedia.org/wiki/XFF_project XFF project])',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Liangent
  * @author Shinjiman
  */
@@ -523,7 +523,7 @@ $messages['zh-hans'] = array(
 	'trustedxff-desc' => '处理一个可信的Proxy地址列表（[http://meta.wikimedia.org/wiki/XFF_project XFF project]）',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
  * @author Shinjiman
  */
