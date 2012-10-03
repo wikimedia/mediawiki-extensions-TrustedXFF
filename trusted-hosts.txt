@@ -548,6 +548,8 @@ accel110.iad.untd.com.
 
 # Opera Mini
 # Source: https://list.opera.com/mailman/listinfo/net-changes-mini
+37.228.104.0/21
+58.67.157.0/24
 59.151.95.128/25
 59.151.98.128/27
 59.151.106.224/27
@@ -715,7 +717,7 @@ w3cache.tpnet.pl.
 # w3cache.icm.edu.pl DNS-RR
 w3cache.icm.edu.pl.
 
-# maxonline.com.sg
+# maxonline.com.sg (starhub.com)
 218.186.9.1
 202.156.10.9
 
