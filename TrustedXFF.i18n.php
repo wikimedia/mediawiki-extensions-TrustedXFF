@@ -311,7 +311,8 @@ $messages['ms'] = array(
 	'trustedxff-desc' => 'Pengendalian senarai alamat proksi yang dipercayai ([http://meta.wikimedia.org/wiki/XFF_project projek XFF])',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎) */
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ */
 $messages['nb'] = array(
 	'trustedxff-desc' => 'Behandling av en liste over pålitelige proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-prosjektet])',
 );
@@ -530,4 +531,3 @@ $messages['zh-hans'] = array(
 $messages['zh-hant'] = array(
 	'trustedxff-desc' => '處理一個可信的 Proxy 位址一覽（[http://meta.wikimedia.org/wiki/XFF_project XFF project]）',
 );
-
