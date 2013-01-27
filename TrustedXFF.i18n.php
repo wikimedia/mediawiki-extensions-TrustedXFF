@@ -324,7 +324,7 @@ $messages['nds'] = array(
 	'trustedxff-desc' => 'Kümmert sik üm en List vun vertroote Proxyadressen ([http://meta.wikimedia.org/wiki/XFF_project XFF-ProjeKt])',
 );
 
-/** Nedersaksisch (Nedersaksisch)
+/** Nedersaksies (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
