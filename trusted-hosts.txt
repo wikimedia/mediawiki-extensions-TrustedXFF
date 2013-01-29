@@ -862,3 +862,31 @@ do-lb-a01.isp.t-ipnet.de.
 116.50.57.180
 116.50.58.180
 
+# Yandex.Turbo (similar to Opera Mini)
+# Source: email, logs, reverse DNS
+trbo01d.trbo.yandex.net
+trbo02d.trbo.yandex.net
+trbo03d.trbo.yandex.net
+trbo04d.trbo.yandex.net
+trbo05d.trbo.yandex.net
+trbo06d.trbo.yandex.net
+trbo07d.trbo.yandex.net
+trbo08d.trbo.yandex.net
+trbo09d.trbo.yandex.net
+trbo10d.trbo.yandex.net
+trbo11d.trbo.yandex.net
+trbo12d.trbo.yandex.net
+trbo13d.trbo.yandex.net
+trbo14d.trbo.yandex.net
+trbo15d.trbo.yandex.net
+trbo16d.trbo.yandex.net
+trbo17d.trbo.yandex.net
+trbo18d.trbo.yandex.net
+trbo19d.trbo.yandex.net
+trbo20d.trbo.yandex.net
+trbo21d.trbo.yandex.net
+trbo22d.trbo.yandex.net
+trbo23d.trbo.yandex.net
+trbo24d.trbo.yandex.net
+trbo25d.trbo.yandex.net
+
