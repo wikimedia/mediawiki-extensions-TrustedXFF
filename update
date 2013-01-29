@@ -1,9 +1,14 @@
 #!/bin/bash
-
-cd `dirname $0`
-mwscript extensions/TrustedXFF/generate.php --wiki=aawiki ../../cache/trusted-xff.cdb
-bzip2 -kf ../../cache/trusted-xff.cdb
-if [ -x /usr/local/bin/sync-common-file ]; then
-	version="`pwd | awk -F/ '{print $5}'`"
-	sync-common-file "$version"/cache/trusted-xff.cdb
-fi
+set -e
+(
+	cd `dirname $0`
+	tempfile=`sudo -u apache mktemp`
+	sudo -u apache chmod a+r "$tempfile"
+	sudo -u apache mwscript extensions/TrustedXFF/generate.php --wiki=aawiki "$tempfile"
+	cp "$tempfile" ../../cache/trusted-xff.cdb
+	if [ -x /usr/local/bin/sync-common-file ]; then
+		version="`pwd | awk -F/ '{print $5}'`"
+		sync-common-file "$version"/cache/trusted-xff.cdb || true
+	fi
+	sudo -u apache rm -f "$tempfile"
+) || echo "Failed"
