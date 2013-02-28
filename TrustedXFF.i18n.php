@@ -14,10 +14,11 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author Purodha
+ * @author Shirayuki
  * @author The Evil IP address
  */
 $messages['qqq'] = array(
-	'trustedxff-desc' => '{{desc}}',
+	'trustedxff-desc' => '{{desc|name=Trusted XFF|url=http://www.mediawiki.org/wiki/Extension:TrustedXFF}}',
 );
 
 /** Arabic (العربية)
