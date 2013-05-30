@@ -33,6 +33,15 @@ class TrustedXFF {
 
 	var $cdb;
 
+	// FIXME: IPv6 ranges need to be put here for now, there is no
+	// trusted-hosts.txt support. The ranges are too large to be expanded with
+	// the current CDB system.
+	static $ipv6Ranges = array(
+		// Opera Turbo
+		// Source: net-changes-mini
+		'2001:4c28::/32'
+	);
+
 	static function onIsTrustedProxy( &$ip, &$trusted ) {
 		// Don't want to override hosts that are already trusted
 		if ( !$trusted ) {
@@ -70,7 +79,17 @@ class TrustedXFF {
 		if ( $data ) {
 			return true;
 		}
-		// TODO: IPv6 prefixes which aren't feasible to expand
+
+		// Try IPv6 ranges
+		if ( substr( $hex, 0, 2 ) === 'v6' ) {
+			foreach ( self::$ipv6Ranges as $range ) {
+				list( $start, $end ) = IP::parseRange( $range );
+				if ( $hex >= $start && $hex <= $end ) {
+					return true;
+				}
+			}
+		}
+
 		return false;
 	}
 }
