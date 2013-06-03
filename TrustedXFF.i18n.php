@@ -312,7 +312,7 @@ $messages['ms'] = array(
 	'trustedxff-desc' => 'Pengendalian senarai alamat proksi yang dipercayai ([http://meta.wikimedia.org/wiki/XFF_project projek XFF])',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  */
 $messages['nb'] = array(
 	'trustedxff-desc' => 'Behandling av en liste over pålitelige proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-prosjektet])',
@@ -325,7 +325,7 @@ $messages['nds'] = array(
 	'trustedxff-desc' => 'Kümmert sik üm en List vun vertroote Proxyadressen ([http://meta.wikimedia.org/wiki/XFF_project XFF-ProjeKt])',
 );
 
-/** Nedersaksies (Nedersaksies)
+/** Low Saxon (Netherlands) (Nedersaksies)
  * @author Servien
  */
 $messages['nds-nl'] = array(
@@ -339,7 +339,7 @@ $messages['nl'] = array(
 	'trustedxff-desc' => 'Beheert een lijst met adressen van vertrouwde proxyservers ([http://meta.wikimedia.org/wiki/XFF_project XFF-project])',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Frokor
  */
 $messages['nn'] = array(
