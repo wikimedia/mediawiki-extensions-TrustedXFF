@@ -257,9 +257,10 @@ $messages['ka'] = array(
 
 /** Korean (한국어)
  * @author Kwj2772
+ * @author 아라
  */
 $messages['ko'] = array(
-	'trustedxff-desc' => '믿을 수 있는 프록시 주소 목록을 관리 ([http://meta.wikimedia.org/wiki/XFF_project XFF 프로젝트])',
+	'trustedxff-desc' => '믿을 수 있는 프록시 주소 목록의 관리 ([http://meta.wikimedia.org/wiki/XFF_project XFF 프로젝트])',
 );
 
 /** Colognian (Ripoarisch)
