@@ -351,7 +351,7 @@ $messages['nn'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
-	'trustedxff-desc' => 'Gestion d’una tièra d’adreças de servidors mandataris de fisança ([http://meta.wikimedia.org/wiki/XFF_project projet XFF])',
+	'trustedxff-desc' => 'Gestion d’una lista d’adreças de servidors mandataris de fisança ([http://meta.wikimedia.org/wiki/XFF_project projet XFF])',
 );
 
 /** Polish (polski)
