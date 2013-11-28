@@ -37,9 +37,11 @@ class TrustedXFF {
 	// trusted-hosts.txt support. The ranges are too large to be expanded with
 	// the current CDB system.
 	static $ipv6Ranges = array(
-		// Opera Turbo
-		// Source: net-changes-mini
-		'2001:4c28::/32'
+		// Opera Mini
+		// Source: Email 22-May-2013
+		'2001:4c28:1::/48',
+		'2001:4c28:2000::/36',
+		'2001:4c28:3000::/36'
 	);
 
 	static function onIsTrustedProxy( &$ip, &$trusted ) {
