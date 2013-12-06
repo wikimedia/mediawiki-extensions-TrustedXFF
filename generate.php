@@ -7,9 +7,11 @@ if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 }
 require( "$IP/maintenance/commandLine.inc" );
 
-$inFile = fopen( 'trusted-hosts.txt', 'r' );
+$inFileName = 'trusted-hosts.txt';
+
+$inFile = fopen( $inFileName, 'r' );
 if ( !$inFile ) {
-	echo "Unable to open input file \"trusted-xff.txt\"\n";
+	echo "Unable to open input file \"$inFileName\"\n";
 	exit( 1 );
 }
 
@@ -18,12 +20,12 @@ if( isset( $args[0] ) ) {
 } elseif( isset( $wgTrustedXffFile ) ) {
 	$target = $wgTrustedXffFile;
 } else {
-	echo "TrustedXffFile extension is not enabled. Specify target output file on command line!\n";
+	echo "The TrustedXffFile extension is not enabled. Try specifing the target output file name on the command line!\n";
 	exit( 1 );
 }
 $outFile = dba_open( $target, 'n', 'cdb' );
 if ( !$outFile ) {
-	echo "Unable open output file \"trusted-xff.cdb\"\n";
+	echo "Unable to open output file \"$target\"\n";
 	exit( 1 );
 }
 
