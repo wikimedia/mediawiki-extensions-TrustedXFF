@@ -71,7 +71,7 @@ $messages['bs'] = array(
 	'trustedxff-desc' => 'Preuređivanje spiska pouzdanih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekat])',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Mormegil
  */
 $messages['cs'] = array(
