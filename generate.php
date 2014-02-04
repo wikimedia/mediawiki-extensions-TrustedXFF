@@ -23,8 +23,9 @@ if( isset( $args[0] ) ) {
 	echo "The TrustedXffFile extension is not enabled. Try specifing the target output file name on the command line!\n";
 	exit( 1 );
 }
-$outFile = dba_open( $target, 'n', 'cdb' );
-if ( !$outFile ) {
+try {
+	$outFile = CdbWriter::open( $target );
+} catch ( CdbException $e ) {
 	echo "Unable to open output file \"$target\"\n";
 	exit( 1 );
 }
@@ -86,7 +87,7 @@ foreach ( $ranges as $i => $range ) {
 
 	if ( $start === $end ) {
 		// Single host
-		dba_insert( $start, '1', $outFile );
+		$outFile->set( $start, '1' );
 		$numHosts++;
 		showProgress( $i, count( $ranges ) );
 		continue;
@@ -119,14 +120,14 @@ foreach ( $ranges as $i => $range ) {
 	for ( $j = $startNum; $j <= $endNum; $j++ ) {
 		$hex = strtoupper( base_convert( $j, 10, 16 ) );
 		$hex = str_pad( $hex, $suffixLength, '0', STR_PAD_LEFT );
-		dba_insert( $prefix . $hex, '1', $outFile );
+		$outFile->set( $prefix . $hex, '1' );
 		$numHosts++;
 	}
 	showProgress( $i, count( $ranges ) );
 }
 echo "\n";
 
-dba_close( $outFile );
+$outFile->close();
 echo "$numHosts hosts listed\n";
 
 

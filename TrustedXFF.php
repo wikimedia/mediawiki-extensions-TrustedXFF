@@ -65,10 +65,7 @@ class TrustedXFF {
 			if ( !file_exists( $wgTrustedXffFile ) ) {
 				throw new MWException( 'TrustedXFF: hosts file missing. You need to download it.' );
 			}
-			if ( !function_exists( 'dba_open' ) ) {
-				throw new MWException( 'The TrustedXFF extension needs PHP\'s DBA module to work.' );
-			}
-			$this->cdb = dba_open( $wgTrustedXffFile, 'r-', 'cdb' );
+			$this->cdb = CdbReader::open( $wgTrustedXffFile );
 		}
 		return $this->cdb;
 	}
@@ -77,7 +74,7 @@ class TrustedXFF {
 		$cdb = $this->getCdbHandle();
 		// Try single host
 		$hex = IP::toHex( $ip );
-		$data = dba_fetch( $hex, $cdb );
+		$data = $cdb->get( $hex );
 		if ( $data ) {
 			return true;
 		}
