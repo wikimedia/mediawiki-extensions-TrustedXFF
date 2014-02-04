@@ -71,6 +71,13 @@ $messages['bs'] = array(
 	'trustedxff-desc' => 'Preuređivanje spiska pouzdanih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekat])',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'trustedxff-desc' => 'Прокси-адресин ([http://meta.wikimedia.org/wiki/XFF_project Проект XFF]) тешам болу могӀа кечбар',
+);
+
 /** Czech (čeština)
  * @author Mormegil
  */
