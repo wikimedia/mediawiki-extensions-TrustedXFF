@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pras"
-        ]
-    },
-    "trustedxff-desc": "Pananganan dhaptar alamat proxy kapercaya ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Pras"
+		]
+	},
+	"trustedxff-desc": "Pananganan dhaptar alamat proxy kapercaya ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Str4nd"
-        ]
-    },
-    "trustedxff-desc": "Käsittelee [http://meta.wikimedia.org/wiki/XFF_project XFF-projektin] luettelon luotetuista välityspalvelimista."
+	"@metadata": {
+		"authors": [
+			"Str4nd"
+		]
+	},
+	"trustedxff-desc": "Käsittelee [http://meta.wikimedia.org/wiki/XFF_project XFF-projektin] luettelon luotetuista välityspalvelimista."
 }

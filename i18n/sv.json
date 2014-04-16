@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "M.M.S."
-        ]
-    },
-    "trustedxff-desc": "Behandlar en lista över troliga proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-projektet])"
+	"@metadata": {
+		"authors": [
+			"M.M.S."
+		]
+	},
+	"trustedxff-desc": "Behandlar en lista över troliga proxyadresser ([http://meta.wikimedia.org/wiki/XFF_project XFF-projektet])"
 }

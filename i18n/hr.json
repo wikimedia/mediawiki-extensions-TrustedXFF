@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dalibor Bosits"
-        ]
-    },
-    "trustedxff-desc": "Omogućava stvaranje popisa odobrenih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekt])"
+	"@metadata": {
+		"authors": [
+			"Dalibor Bosits"
+		]
+	},
+	"trustedxff-desc": "Omogućava stvaranje popisa odobrenih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekt])"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Minh Nguyen"
-        ]
-    },
-    "trustedxff-desc": "Xử lý danh sách các địa chỉ proxy được tin cậy ([http://meta.wikimedia.org/wiki/XFF_project dự án XFF])"
+	"@metadata": {
+		"authors": [
+			"Minh Nguyen"
+		]
+	},
+	"trustedxff-desc": "Xử lý danh sách các địa chỉ proxy được tin cậy ([http://meta.wikimedia.org/wiki/XFF_project dự án XFF])"
 }

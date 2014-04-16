@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Aotake"
-        ]
-    },
-    "trustedxff-desc": "信頼できるプロキシアドレス一覧の管理 ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Aotake"
+		]
+	},
+	"trustedxff-desc": "信頼できるプロキシアドレス一覧の管理 ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

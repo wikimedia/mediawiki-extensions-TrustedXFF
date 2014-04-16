@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ramsis II"
-        ]
-    },
-    "trustedxff-desc": "التعامل مع لستة عناوين البروكس الموثوق فيها ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Ramsis II"
+		]
+	},
+	"trustedxff-desc": "التعامل مع لستة عناوين البروكس الموثوق فيها ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

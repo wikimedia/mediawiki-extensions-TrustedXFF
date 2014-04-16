@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Robby"
-        ]
-    },
-    "trustedxff-desc": "Gestioun vun enger Lëscht vu vertrauenswerte Proxy-Adressen ([http://meta.wikimedia.org/wiki/XFF_project Projet-XFF])"
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"trustedxff-desc": "Gestioun vun enger Lëscht vu vertrauenswerte Proxy-Adressen ([http://meta.wikimedia.org/wiki/XFF_project Projet-XFF])"
 }

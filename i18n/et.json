@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pikne"
-        ]
-    },
-    "trustedxff-desc": "Usaldusväärsete proksiaadresside nimekirja alalhoidmine ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Pikne"
+		]
+	},
+	"trustedxff-desc": "Usaldusväärsete proksiaadresside nimekirja alalhoidmine ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

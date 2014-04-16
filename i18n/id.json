@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rex"
-        ]
-    },
-    "trustedxff-desc": "Penanganan daftar alamat proxy terpercaya ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Rex"
+		]
+	},
+	"trustedxff-desc": "Penanganan daftar alamat proxy terpercaya ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

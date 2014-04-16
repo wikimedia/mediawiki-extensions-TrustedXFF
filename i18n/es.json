@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Crazymadlover"
-        ]
-    },
-    "trustedxff-desc": "Manejo de una lista de direcciones proxy confiables([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"@metadata": {
+		"authors": [
+			"Crazymadlover"
+		]
+	},
+	"trustedxff-desc": "Manejo de una lista de direcciones proxy confiables([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }

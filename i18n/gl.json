@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Toliño"
-        ]
-    },
-    "trustedxff-desc": "Xestión dunha lista de enderezos proxy de confianza ([http://meta.wikimedia.org/wiki/XFF_project proxecto XFF])"
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"trustedxff-desc": "Xestión dunha lista de enderezos proxy de confianza ([http://meta.wikimedia.org/wiki/XFF_project proxecto XFF])"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "CERminator"
-        ]
-    },
-    "trustedxff-desc": "Preuređivanje spiska pouzdanih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekat])"
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"trustedxff-desc": "Preuređivanje spiska pouzdanih proxy adresa ([http://meta.wikimedia.org/wiki/XFF_project XFF projekat])"
 }

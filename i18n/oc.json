@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Cedric31"
-        ]
-    },
-    "trustedxff-desc": "Gestion d’una lista d’adreças de servidors mandataris de fisança ([http://meta.wikimedia.org/wiki/XFF_project projet XFF])"
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"trustedxff-desc": "Gestion d’una lista d’adreças de servidors mandataris de fisança ([http://meta.wikimedia.org/wiki/XFF_project projet XFF])"
 }

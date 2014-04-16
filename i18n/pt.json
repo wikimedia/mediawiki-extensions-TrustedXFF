@@ -1,10 +1,10 @@
 {
-    "@metadata": {
-        "authors": [
-            "Hamilton Abreu",
-            "Luckas",
-            "Malafaya"
-        ]
-    },
-    "trustedxff-desc": "Tratamento de uma lista de endereços ''proxy'' confiáveis ([http://meta.wikimedia.org/wiki/XFF_project projeto XFF])"
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Luckas",
+			"Malafaya"
+		]
+	},
+	"trustedxff-desc": "Tratamento de uma lista de endereços ''proxy'' confiáveis ([http://meta.wikimedia.org/wiki/XFF_project projeto XFF])"
 }

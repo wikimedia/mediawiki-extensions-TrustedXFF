@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Darth Kule"
-        ]
-    },
-    "trustedxff-desc": "Gestione di un elenco di indirizzi proxy fidati ([http://meta.wikimedia.org/wiki/XFF_project progetto XFF])"
+	"@metadata": {
+		"authors": [
+			"Darth Kule"
+		]
+	},
+	"trustedxff-desc": "Gestione di un elenco di indirizzi proxy fidati ([http://meta.wikimedia.org/wiki/XFF_project progetto XFF])"
 }
