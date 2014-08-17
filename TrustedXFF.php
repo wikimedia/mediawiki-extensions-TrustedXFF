@@ -33,7 +33,7 @@ $wgHooks['IsTrustedProxy'][] = 'TrustedXFF::onIsTrustedProxy';
 class TrustedXFF {
 	static $instance;
 
-	var $cdb;
+	public $cdb;
 
 	// FIXME: IPv6 ranges need to be put here for now, there is no
 	// trusted-hosts.txt support. The ranges are too large to be expanded with
