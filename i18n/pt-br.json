@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Helder.wiki"
+			"Helder.wiki",
+			"He7d3r"
 		]
 	},
 	"trustedxff-desc": "Manuseamento de uma lista de endereços proxy confiáveis ([http://meta.wikimedia.org/wiki/XFF_project projeto XFF])"
