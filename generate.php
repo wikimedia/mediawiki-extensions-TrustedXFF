@@ -7,6 +7,9 @@ if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 }
 require( "$IP/maintenance/commandLine.inc" );
 
+use Cdb\Exception as CdbException;
+use Cdb\Writer as CdbWriter;
+
 $inFileName = 'trusted-hosts.txt';
 
 $inFile = fopen( $inFileName, 'r' );

@@ -1,5 +1,7 @@
 <?php
 
+use Cdb\Reader as CdbReader;
+
 class TrustedXFF {
 	static $instance;
 
