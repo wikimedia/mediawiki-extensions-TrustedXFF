@@ -3,8 +3,9 @@
 		"authors": [
 			"Purodha",
 			"Shirayuki",
-			"The Evil IP address"
+			"The Evil IP address",
+			"Umherirrender"
 		]
 	},
-	"trustedxff-desc": "{{desc|name=Trusted XFF|url=http://www.mediawiki.org/wiki/Extension:TrustedXFF}}"
+	"trustedxff-desc": "{{desc|name=Trusted XFF|url=https://www.mediawiki.org/wiki/Extension:TrustedXFF}}"
 }
