@@ -36,9 +36,6 @@ class TrustedXFF {
 	function getCdbHandle() {
 		if ( !$this->cdb ) {
 			global $wgTrustedXffFile;
-			if ( !file_exists( $wgTrustedXffFile ) ) {
-				throw new MWException( 'TrustedXFF: hosts file missing. You need to download it.' );
-			}
 			$this->cdb = CdbReader::open( $wgTrustedXffFile );
 		}
 		return $this->cdb;
