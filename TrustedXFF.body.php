@@ -34,10 +34,16 @@ class TrustedXFF {
 	}
 
 	function getCdbHandle() {
+		global $wgTrustedXffFile;
+
 		if ( !$this->cdb ) {
-			global $wgTrustedXffFile;
-			$this->cdb = CdbReader::open( $wgTrustedXffFile );
+			if ( pathinfo( $wgTrustedXffFile, PATHINFO_EXTENSION ) === 'php' ) {
+				$this->cdb = new CdbReader\Hash( include( $wgTrustedXffFile ) );
+			} else {
+				$this->cdb = CdbReader::open( $wgTrustedXffFile );
+			}
 		}
+
 		return $this->cdb;
 	}
 
