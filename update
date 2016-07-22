@@ -2,12 +2,12 @@
 set -e
 (
 	cd `dirname $0`
-	tempfile=`sudo -u apache mktemp`
-	sudo -u apache chmod a+r "$tempfile"
-	sudo -u apache mwscript extensions/TrustedXFF/generate.php --wiki=aawiki "$tempfile"
-	cp "$tempfile" ../../../wmf-config/trusted-xff.cdb
-	if [ -x /usr/local/bin/sync-common-file ]; then
-		sync-common-file wmf-config/trusted-xff.cdb || true
+	tempfile=`sudo -u mwdeploy mktemp`
+	sudo -u mwdeploy chmod a+r "$tempfile"
+	sudo -u mwdeploy mwscript extensions/TrustedXFF/generate.php --wiki=aawiki "$tempfile"
+	sudo -u mwdeploy cp "$tempfile" ../../../wmf-config/trusted-xff.cdb
+	if [ -x /usr/bin/scap ]; then
+		scap sync-file wmf-config/trusted-xff.cdb || true
 	fi
 	sudo -u apache rm -f "$tempfile"
 ) || echo "Failed"
