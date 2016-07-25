@@ -4,8 +4,7 @@
 #     http://meta.wikimedia.org/wiki/XFF_project
 #
 # Note: IPv6 ranges cannot currently be listed in this file. They are 
-# listed in TrustedXFF.php instead.
-
+# listed in TrustedXFF.body.php instead.
 
 # AOL
 # Source: http://webmaster.info.aol.com/proxyinfo.html
