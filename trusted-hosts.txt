@@ -630,7 +630,6 @@ filter08.solcon.nl.
 filter09.solcon.nl.
 filter10.solcon.nl.
 filter11.solcon.nl.
-filter12.solcon.nl.
 
 # University of Maine, MSLN
 # Source: email
