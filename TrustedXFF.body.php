@@ -10,15 +10,20 @@ class TrustedXFF {
 	// FIXME: IPv6 ranges need to be put here for now, there is no
 	// trusted-hosts.txt support. The ranges are too large to be expanded with
 	// the current CDB system.
-	static $ipv6Ranges = array(
+	static $ipv6Ranges = [
 		// Opera Mini
 		// Source: Email 22-May-2013
 		'2001:4c28:1::/48',
 		'2001:4c28:2000::/36',
 		'2001:4c28:3000::/36'
-	);
+	];
 
-	static function onIsTrustedProxy( &$ip, &$trusted ) {
+	/**
+	 * @param string $ip
+	 * @param bool $trusted
+	 * @return bool
+	 */
+	public static function onIsTrustedProxy( &$ip, &$trusted ) {
 		// Don't want to override hosts that are already trusted
 		if ( !$trusted ) {
 			$trusted = self::getInstance()->isTrusted( $ip );
@@ -26,14 +31,20 @@ class TrustedXFF {
 		return true;
 	}
 
-	static function getInstance() {
+	/**
+	 * @return TrustedXFF
+	 */
+	private static function getInstance() {
 		if ( !self::$instance ) {
 			self::$instance = new TrustedXFF;
 		}
 		return self::$instance;
 	}
 
-	function getCdbHandle() {
+	/**
+	 * @return CdbReader|CdbReader\Hash
+	 */
+	private function getCdbHandle() {
 		global $wgTrustedXffFile;
 
 		if ( !$this->cdb ) {
@@ -47,7 +58,11 @@ class TrustedXFF {
 		return $this->cdb;
 	}
 
-	function isTrusted( $ip ) {
+	/**
+	 * @param string $ip
+	 * @return bool
+	 */
+	private function isTrusted( $ip ) {
 		$cdb = $this->getCdbHandle();
 		// Try single host
 		$hex = IP::toHex( $ip );
