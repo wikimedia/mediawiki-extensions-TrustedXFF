@@ -18,6 +18,13 @@ class TrustedXFF {
 		'2001:4c28:3000::/36'
 	];
 
+	public static function onRegistration() {
+		global $wgTrustedXffFile, $IP;
+		if ( $wgTrustedXffFile === null ) {
+			$wgTrustedXffFile = $IP . '/cache/trusted-xff.cdb';
+		}
+	}
+
 	/**
 	 * @param string $ip
 	 * @param bool $trusted
