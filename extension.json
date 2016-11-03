@@ -8,11 +8,9 @@
 		"Tim Starling"
 	],
 	"type": "other",
+	"callback": "TrustedXFF::onRegistration",
 	"config": {
-		"TrustedXffFile": {
-			"value": "cache/trusted-xff.cdb",
-			"path": true
-		}
+		"TrustedXffFile": null
 	},
 	"AutoloadClasses": {
 		"TrustedXFF": "TrustedXFF.body.php"
@@ -27,5 +25,5 @@
 			"TrustedXFF::onIsTrustedProxy"
 		]
 	},
-	"manifest_version": 2
+	"manifest_version": 1
 }
