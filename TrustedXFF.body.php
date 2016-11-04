@@ -1,6 +1,7 @@
 <?php
 
 use Cdb\Reader as CdbReader;
+use IPSet\IPSet;
 
 class TrustedXFF {
 	static $instance;
@@ -24,6 +25,11 @@ class TrustedXFF {
 			$wgTrustedXffFile = $IP . '/cache/trusted-xff.cdb';
 		}
 	}
+
+	/**
+	 * @var IPSet|null
+	 */
+	private static $ipv6Set;
 
 	/**
 	 * @param string $ip
@@ -80,12 +86,11 @@ class TrustedXFF {
 
 		// Try IPv6 ranges
 		if ( substr( $hex, 0, 2 ) === 'v6' ) {
-			foreach ( self::$ipv6Ranges as $range ) {
-				list( $start, $end ) = IP::parseRange( $range );
-				if ( $hex >= $start && $hex <= $end ) {
-					return true;
-				}
+			if ( !self::$ipv6Set ) {
+				self::$ipv6Set = new IPSet( self::$ipv6Ranges );
 			}
+
+			return self::$ipv6Set->match( $ip );
 		}
 
 		return false;
