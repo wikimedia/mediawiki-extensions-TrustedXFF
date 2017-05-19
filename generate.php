@@ -3,9 +3,9 @@
 if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 	$IP = getenv( 'MW_INSTALL_PATH' );
 } else {
-	$IP = dirname( __FILE__ ) . '/../..';
+	$IP = __DIR__ . '/../..';
 }
-require( "$IP/maintenance/commandLine.inc" );
+require "$IP/maintenance/commandLine.inc";
 
 use Cdb\Exception as CdbException;
 use Cdb\Writer as CdbWriter;
@@ -50,12 +50,13 @@ if ( !$inFile ) {
 	exit( 1 );
 }
 
-if( isset( $args[0] ) ) {
+if ( isset( $args[0] ) ) {
 	$target = $args[0];
-} elseif( isset( $wgTrustedXffFile ) ) {
+} elseif ( isset( $wgTrustedXffFile ) ) {
 	$target = $wgTrustedXffFile;
 } else {
-	echo "The TrustedXffFile extension is not enabled. Try specifing the target output file name on the command line!\n";
+	echo "The TrustedXffFile extension is not enabled. " .
+		"Try specifing the target output file name on the command line!\n";
 	exit( 1 );
 }
 try {
@@ -131,7 +132,7 @@ foreach ( $ranges as $i => $range ) {
 	}
 
 	// Find the longest common prefix in the range
-	for ( $length = strlen( $start); $length > 0; $length-- ) {
+	for ( $length = strlen( $start ); $length > 0; $length-- ) {
 		if ( substr( $start, 0, $length ) === substr( $end, 0, $length ) ) {
 			break;
 		}
@@ -149,7 +150,7 @@ foreach ( $ranges as $i => $range ) {
 		echo "TrustedXFF has not yet been optimised for large ranges.\n";
 		continue;
 	}
-	if ( $endNum > pow(2,52) ) {
+	if ( $endNum > pow( 2, 52 ) ) {
 		// This is unreachable unless someone tweaks some constants above
 		echo "Loss of precision in floating point number, will cause infinite loop.\n";
 		continue;
@@ -167,13 +168,10 @@ echo "\n";
 $outFile->close();
 echo "$numHosts hosts listed\n";
 
-
-//-----------------------------------------------------------------
 function showProgress( $current, $total ) {
 	$length = 50;
-	$dots = intval( ( $current + 1) / $total * $length );
+	$dots = intval( ( $current + 1 ) / $total * $length );
 	printf( "%6.2f%%  [" .
 		str_repeat( '=', $dots ) . str_repeat( '.', $length - $dots ) . "]\r",
-		( $current + 1) / $total * 100 );
+		( $current + 1 ) / $total * 100 );
 }
-

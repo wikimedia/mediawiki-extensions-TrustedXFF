@@ -4,14 +4,14 @@ use Cdb\Reader as CdbReader;
 use IPSet\IPSet;
 
 class TrustedXFF {
-	static $instance;
+	public static $instance;
 
 	public $cdb;
 
 	// FIXME: IPv6 ranges need to be put here for now, there is no
 	// trusted-hosts.txt support. The ranges are too large to be expanded with
 	// the current CDB system.
-	static $ipv6Ranges = [
+	public static $ipv6Ranges = [
 		// Opera Mini
 		// Source: Email 22-May-2013
 		'2001:4c28:1::/48',
@@ -62,7 +62,7 @@ class TrustedXFF {
 
 		if ( !$this->cdb ) {
 			if ( pathinfo( $wgTrustedXffFile, PATHINFO_EXTENSION ) === 'php' ) {
-				$this->cdb = new CdbReader\Hash( include( $wgTrustedXffFile ) );
+				$this->cdb = new CdbReader\Hash( include $wgTrustedXffFile );
 			} else {
 				$this->cdb = CdbReader::open( $wgTrustedXffFile );
 			}
