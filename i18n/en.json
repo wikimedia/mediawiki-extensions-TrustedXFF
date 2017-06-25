@@ -2,5 +2,5 @@
 	"@metadata": {
 		"authors": []
 	},
-	"trustedxff-desc": "Handling of a list of trusted proxy addresses ([http://meta.wikimedia.org/wiki/XFF_project XFF project])"
+	"trustedxff-desc": "Handling of a list of trusted proxy addresses ([https://meta.wikimedia.org/wiki/XFF_project XFF project])"
 }
