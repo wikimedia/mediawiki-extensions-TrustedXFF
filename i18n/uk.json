@@ -4,5 +4,5 @@
 			"AS"
 		]
 	},
-	"trustedxff-desc": "Обробка списку довірених проксі-адрес ([http://meta.wikimedia.org/wiki/XFF_project Проект XFF])"
+	"trustedxff-desc": "Обробка списку довірених проксі-адрес ([https://meta.wikimedia.org/wiki/XFF_project Проект XFF])"
 }

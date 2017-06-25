@@ -5,5 +5,5 @@
 			"Shinjiman"
 		]
 	},
-	"trustedxff-desc": "处理一个可信的Proxy地址列表（[http://meta.wikimedia.org/wiki/XFF_project XFF project]）"
+	"trustedxff-desc": "处理一个可信的Proxy地址列表（[https://meta.wikimedia.org/wiki/XFF_project XFF project]）"
 }
