@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dragonòt"
+			"Dragonòt",
+			"Borichèt"
 		]
 	},
-	"trustedxff-desc": "Gestion ëd na lista d'adrësse sìcure ëd proxy ([https://meta.wikimedia.org/wiki/XFF_project Proget XFF])"
+	"trustedxff-desc": "Gestion ëd na lista d'adrësse ëd servent mandatari fidà ([https://meta.wikimedia.org/wiki/XFF_project Proget XFF])"
 }
