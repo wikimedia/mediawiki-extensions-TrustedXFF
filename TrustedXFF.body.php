@@ -32,8 +32,8 @@ class TrustedXFF {
 	private static $ipv6Set;
 
 	/**
-	 * @param string $ip
-	 * @param bool $trusted
+	 * @param string &$ip
+	 * @param bool &$trusted
 	 * @return bool
 	 */
 	public static function onIsTrustedProxy( &$ip, &$trusted ) {
