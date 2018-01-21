@@ -1,7 +1,7 @@
 <?php
 
 use Cdb\Reader as CdbReader;
-use IPSet\IPSet;
+use Wikimedia\IPSet;
 
 class TrustedXFF {
 	public static $instance;
