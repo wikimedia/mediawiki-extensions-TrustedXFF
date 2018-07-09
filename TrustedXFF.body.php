@@ -55,10 +55,17 @@ class TrustedXFF {
 	}
 
 	/**
+	 * @throws MWException
 	 * @return CdbReader|CdbReader\Hash
 	 */
 	private function getCdbHandle() {
 		global $wgTrustedXffFile;
+
+		if ( ! file_exists( $wgTrustedXffFile ) ) {
+			$message = "Trusted XFF file not found (\$wgTrustedXffFile = $wgTrustedXffFile)";
+			wfDebugLog( 'TrustedXFF', $message );
+			throw new MWException( $message );
+		}
 
 		if ( !$this->cdb ) {
 			if ( pathinfo( $wgTrustedXffFile, PATHINFO_EXTENSION ) === 'php' ) {
@@ -76,7 +83,12 @@ class TrustedXFF {
 	 * @return bool
 	 */
 	private function isTrusted( $ip ) {
-		$cdb = $this->getCdbHandle();
+		try {
+			$cdb = $this->getCdbHandle();
+		} catch ( MWException $e ) {
+			return false;
+		}
+
 		// Try single host
 		$hex = IP::toHex( $ip );
 		$data = $cdb->get( $hex );
