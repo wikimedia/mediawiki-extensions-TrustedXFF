@@ -43,7 +43,7 @@ class StaticArrayWriter {
 	}
 }
 
-$inFileName = 'trusted-hosts.txt';
+$inFileName = __DIR__ . '/trusted-hosts.txt';
 
 $inFile = fopen( $inFileName, 'r' );
 if ( !$inFile ) {
