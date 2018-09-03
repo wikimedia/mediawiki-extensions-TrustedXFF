@@ -35,7 +35,7 @@ class StaticArrayWriter {
 			basename( __FILE__ ),
 			gmdate( 'c' )
 		);
-		$code = $header .  'return ' . var_export( $this->data, true ) . ";\n";
+		$code = $header . 'return ' . var_export( $this->data, true ) . ";\n";
 		$code = preg_replace( '/(\d+ \=\>| (?=\())/i', '', $code );
 		$code = preg_replace( "/^ +/m", "\t", $code );
 		$code = str_replace( [ 'array(', ');' ], [ '[', '];' ], $code );
