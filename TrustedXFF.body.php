@@ -61,7 +61,7 @@ class TrustedXFF {
 	private function getCdbHandle() {
 		global $wgTrustedXffFile;
 
-		if ( ! file_exists( $wgTrustedXffFile ) ) {
+		if ( !file_exists( $wgTrustedXffFile ) ) {
 			$message = "Trusted XFF file not found (\$wgTrustedXffFile = $wgTrustedXffFile)";
 			wfDebugLog( 'TrustedXFF', $message );
 			throw new MWException( $message );
