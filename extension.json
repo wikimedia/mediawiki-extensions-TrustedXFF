@@ -13,7 +13,7 @@
 		"TrustedXffFile": null
 	},
 	"AutoloadClasses": {
-		"TrustedXFF": "TrustedXFF.body.php"
+		"TrustedXFF": "includes/TrustedXFF.php"
 	},
 	"MessagesDirs": {
 		"TrustedXFF": [
