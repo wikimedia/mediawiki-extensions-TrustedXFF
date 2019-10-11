@@ -2,7 +2,7 @@
 
 class TrustedXFFBodyTest extends MediaWikiTestCase {
 
-	protected function setUp() {
+	protected function setUp() : void {
 		parent::setup();
 		TrustedXFF::$instance = null;
 	}
