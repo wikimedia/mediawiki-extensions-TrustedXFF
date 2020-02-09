@@ -2,6 +2,7 @@
 
 use Cdb\Reader as CdbReader;
 use Wikimedia\IPSet;
+use Wikimedia\IPUtils;
 
 class TrustedXFF {
 	public static $instance;
@@ -90,7 +91,7 @@ class TrustedXFF {
 		}
 
 		// Try single host
-		$hex = IP::toHex( $ip );
+		$hex = IPUtils::toHex( $ip );
 		$data = $cdb->get( $hex );
 		if ( $data ) {
 			return true;

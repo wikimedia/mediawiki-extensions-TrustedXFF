@@ -9,6 +9,7 @@ require "$IP/maintenance/commandLine.inc";
 
 use Cdb\Exception as CdbException;
 use Cdb\Writer as CdbWriter;
+use Wikimedia\IPUtils;
 
 /**
  * Emulates Cdb\Writer, but generates a PHP file that returns
@@ -93,7 +94,7 @@ while ( !feof( $inFile ) ) {
 		continue;
 	}
 
-	list( $start, $end ) = IP::parseRange( $line );
+	list( $start, $end ) = IPUtils::parseRange( $line );
 	if ( $start === false ) {
 		// Try DNS
 		$names[] = [ $lineNum, $line ];
@@ -110,7 +111,7 @@ foreach ( $names as $i => $nameInfo ) {
 		echo "Not a valid host or IP address on line $lineNum: $name\n";
 	} else {
 		foreach ( $ips as $ip ) {
-			$hex = IP::toHex( $ip );
+			$hex = IPUtils::toHex( $ip );
 			$ranges[] = [ $lineNum, $hex, $hex ];
 		}
 	}
