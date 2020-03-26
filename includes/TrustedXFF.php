@@ -56,8 +56,8 @@ class TrustedXFF {
 	}
 
 	/**
-	 * @throws MWException
 	 * @return CdbReader|CdbReader\Hash
+	 * @throws MWException
 	 */
 	private function getCdbHandle() {
 		global $wgTrustedXffFile;
