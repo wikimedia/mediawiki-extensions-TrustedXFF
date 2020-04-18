@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Extensions\TrustedXFF\TrustedXFF;
+
 class TrustedXFFBodyTest extends MediaWikiTestCase {
 
 	protected function setUp() : void {
@@ -8,7 +10,7 @@ class TrustedXFFBodyTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers TrustedXFF::onRegistration
+	 * @covers MediaWiki\Extensions\TrustedXFF\TrustedXFF::onRegistration
 	 */
 	public function testXffFileHasASaneDefaultOnRegistrationt() {
 		global $wgTrustedXffFile;
@@ -20,7 +22,7 @@ class TrustedXFFBodyTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers TrustedXFF::isTrusted
+	 * @covers MediaWiki\Extensions\TrustedXFF\TrustedXFF::isTrusted
 	 */
 	public function testMissingXffFileIsHandledGracefully() {
 		$ip = '127.0.0.2';

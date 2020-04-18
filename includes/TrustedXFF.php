@@ -1,6 +1,9 @@
 <?php
 
+namespace MediaWiki\Extensions\TrustedXFF;
+
 use Cdb\Reader as CdbReader;
+use MWException;
 use Wikimedia\IPSet;
 use Wikimedia\IPUtils;
 
@@ -64,7 +67,7 @@ class TrustedXFF {
 
 		if ( !file_exists( $wgTrustedXffFile ) ) {
 			$message = "Trusted XFF file not found (\$wgTrustedXffFile = $wgTrustedXffFile)";
-			wfDebugLog( 'TrustedXFF', $message );
+			\wfDebugLog( 'TrustedXFF', $message );
 			throw new MWException( $message );
 		}
 
