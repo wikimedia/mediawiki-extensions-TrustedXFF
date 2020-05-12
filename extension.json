@@ -8,12 +8,14 @@
 		"Tim Starling"
 	],
 	"type": "other",
-	"require": {
+	"requires": {
 		"MediaWiki": ">= 1.31.0"
 	},
 	"callback": "MediaWiki\\Extensions\\TrustedXFF\\TrustedXFF::onRegistration",
 	"config": {
-		"TrustedXffFile": null
+		"TrustedXffFile": {
+			"value": null
+		}
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extensions\\TrustedXFF\\": "includes/"
@@ -28,5 +30,5 @@
 			"MediaWiki\\Extensions\\TrustedXFF\\TrustedXFF::onIsTrustedProxy"
 		]
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
