@@ -23,13 +23,6 @@ class TrustedXFF {
 		'2001:4c28:3000::/36'
 	];
 
-	public static function onRegistration() {
-		global $wgTrustedXffFile, $IP;
-		if ( $wgTrustedXffFile === null ) {
-			$wgTrustedXffFile = $IP . '/cache/trusted-xff.cdb';
-		}
-	}
-
 	/**
 	 * @var IPSet|null
 	 */
@@ -59,23 +52,31 @@ class TrustedXFF {
 	}
 
 	/**
+	 * @internal For use by generate.php
+	 * @return string File path
+	 */
+	public static function getFilePathInternal() {
+		global $wgTrustedXffFile, $IP;
+		return $wgTrustedXffFile ?? $IP . '/cache/trusted-xff.cdb';
+	}
+
+	/**
 	 * @return CdbReader|CdbReader\Hash
 	 * @throws MWException
 	 */
 	private function getCdbHandle() {
-		global $wgTrustedXffFile;
-
-		if ( !file_exists( $wgTrustedXffFile ) ) {
-			$message = "Trusted XFF file not found (\$wgTrustedXffFile = $wgTrustedXffFile)";
-			\wfDebugLog( 'TrustedXFF', $message );
+		$file = self::getFilePathInternal();
+		if ( !file_exists( $file ) ) {
+			$message = "Trusted XFF file not found (\$wgTrustedXffFile = $file)";
+			wfDebugLog( 'TrustedXFF', $message );
 			throw new MWException( $message );
 		}
 
 		if ( !$this->cdb ) {
-			if ( pathinfo( $wgTrustedXffFile, PATHINFO_EXTENSION ) === 'php' ) {
-				$this->cdb = new CdbReader\Hash( include $wgTrustedXffFile );
+			if ( pathinfo( $file, PATHINFO_EXTENSION ) === 'php' ) {
+				$this->cdb = new CdbReader\Hash( include $file );
 			} else {
-				$this->cdb = CdbReader::open( $wgTrustedXffFile );
+				$this->cdb = CdbReader::open( $file );
 			}
 		}
 

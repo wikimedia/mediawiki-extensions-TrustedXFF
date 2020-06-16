@@ -10,15 +10,15 @@ class TrustedXFFBodyTest extends MediaWikiTestCase {
 	}
 
 	/**
-	 * @covers MediaWiki\Extensions\TrustedXFF\TrustedXFF::onRegistration
+	 * @covers MediaWiki\Extensions\TrustedXFF\TrustedXFF::getFilePathInternal
 	 */
-	public function testXffFileHasASaneDefaultOnRegistrationt() {
-		global $wgTrustedXffFile;
-
+	public function testGetFilePathInternal() {
 		$this->setMwGlobals( 'wgTrustedXffFile', null );
-		TrustedXFF::onRegistration();
 		$this->assertStringEndsWith(
-			'/cache/trusted-xff.cdb', $wgTrustedXffFile );
+			'/cache/trusted-xff.cdb', TrustedXFF::getFilePathInternal() );
+
+		$this->setMwGlobals( 'wgTrustedXffFile', '/tmp/foo.php' );
+		$this->assertEquals( '/tmp/foo.php', TrustedXFF::getFilePathInternal() );
 	}
 
 	/**

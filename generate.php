@@ -54,12 +54,21 @@ if ( !$inFile ) {
 
 if ( isset( $args[0] ) ) {
 	$target = $args[0];
-} elseif ( isset( $wgTrustedXffFile ) ) {
-	$target = $wgTrustedXffFile;
 } else {
-	echo "The TrustedXffFile extension is not enabled. " .
-		"Try specifing the target output file name on the command line!\n";
-	exit( 1 );
+	// To avoid a bootstrapping problem, we need to allow large-scale
+	// installs to generate the database before enabling the extension.
+	// This script as such does not depend on anything from the extension.
+	// However, if it is used without arguments, then we assume a simple
+	// "just work" install where we use the default file location and path.
+	// To avoid mistakes/ambiguity between "default" and "not installed",
+	// bail out here if the extension is not enabled.
+	if ( !ExtensionRegistry::getInstance()->isLoaded( 'TrustedXFF' ) ) {
+		echo 'The TrustedXffFile extension is not enabled. ' .
+			'Either explicitly specify the $wgTrustedXffFile location,' .
+			'or enable the extension first.' . "\n";
+		exit( 1 );
+	}
+	$target = TrustedXFF::getFilePathInternal();
 }
 try {
 	$outFile = pathinfo( $target, PATHINFO_EXTENSION ) === 'php'
