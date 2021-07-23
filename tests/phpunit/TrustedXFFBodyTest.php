@@ -4,7 +4,7 @@ use MediaWiki\Extensions\TrustedXFF\TrustedXFF;
 
 class TrustedXFFBodyTest extends MediaWikiTestCase {
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		parent::setup();
 		TrustedXFF::$instance = null;
 	}
