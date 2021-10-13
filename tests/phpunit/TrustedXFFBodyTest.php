@@ -2,7 +2,7 @@
 
 use MediaWiki\Extensions\TrustedXFF\TrustedXFF;
 
-class TrustedXFFBodyTest extends MediaWikiTestCase {
+class TrustedXFFBodyTest extends MediaWikiIntegrationTestCase {
 
 	protected function setUp(): void {
 		parent::setup();
