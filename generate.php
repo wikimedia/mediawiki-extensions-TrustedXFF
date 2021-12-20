@@ -5,7 +5,7 @@ if ( getenv( 'MW_INSTALL_PATH' ) !== false ) {
 } else {
 	$IP = __DIR__ . '/../..';
 }
-require "$IP/maintenance/commandLine.inc";
+require "$IP/maintenance/CommandLineInc.php";
 
 use Wikimedia\IPUtils;
 use Wikimedia\StaticArrayWriter;
