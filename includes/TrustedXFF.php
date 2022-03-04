@@ -12,8 +12,8 @@ class TrustedXFF {
 	public static $instance;
 
 	// FIXME: IPv6 ranges need to be put here for now, there is no
-	// trusted-hosts.txt support. The ranges are too large to be expanded with
-	// the current CDB system.
+	// trusted-hosts.txt support. The ranges were too large to be expanded with
+	// the old CDB system.
 	private const IPV6_RANGES = [
 		// Opera Mini
 		// Source: Email 22-May-2013
@@ -68,7 +68,7 @@ class TrustedXFF {
 		}
 
 		// Try IPv6 ranges
-		if ( substr( $hex, 0, 2 ) === 'v6' ) {
+		if ( strpos( $hex, 'v6' ) === 0 ) {
 			if ( $this->ipv6Set === null ) {
 				$this->ipv6Set = new IPSet( self::IPV6_RANGES );
 			}
