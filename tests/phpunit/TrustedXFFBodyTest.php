@@ -1,6 +1,6 @@
 <?php
 
-use MediaWiki\Extensions\TrustedXFF\TrustedXFF;
+use MediaWiki\Extension\TrustedXFF\TrustedXFF;
 
 class TrustedXFFBodyTest extends MediaWikiIntegrationTestCase {
 
@@ -10,7 +10,7 @@ class TrustedXFFBodyTest extends MediaWikiIntegrationTestCase {
 	}
 
 	/**
-	 * @covers MediaWiki\Extensions\TrustedXFF\TrustedXFF::isTrusted
+	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::isTrusted
 	 */
 	public function testMissingXffFileIsHandledGracefully() {
 		$ip = '127.0.0.2';

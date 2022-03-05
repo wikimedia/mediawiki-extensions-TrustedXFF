@@ -12,7 +12,7 @@
 		"MediaWiki": ">= 1.36.0"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extensions\\TrustedXFF\\": "includes/"
+		"MediaWiki\\Extension\\TrustedXFF\\": "includes/"
 	},
 	"MessagesDirs": {
 		"TrustedXFF": [
@@ -21,7 +21,7 @@
 	},
 	"Hooks": {
 		"IsTrustedProxy": [
-			"MediaWiki\\Extensions\\TrustedXFF\\TrustedXFF::onIsTrustedProxy"
+			"MediaWiki\\Extension\\TrustedXFF\\TrustedXFF::onIsTrustedProxy"
 		]
 	},
 	"manifest_version": 2

@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extensions\TrustedXFF;
+namespace MediaWiki\Extension\TrustedXFF;
 
 use Wikimedia\IPSet;
 use Wikimedia\IPUtils;
