@@ -41,7 +41,7 @@ while ( !feof( $inFile ) ) {
 		continue;
 	}
 
-	list( $start, $end ) = IPUtils::parseRange( $line );
+	[ $start, $end ] = IPUtils::parseRange( $line );
 	if ( $start === false ) {
 		// Try DNS
 		$names[] = [ $lineNum, $line ];
@@ -52,7 +52,7 @@ while ( !feof( $inFile ) ) {
 
 echo count( $names ) . " DNS queries to do...\n";
 foreach ( $names as $i => $nameInfo ) {
-	list( $lineNum, $name ) = $nameInfo;
+	[ $lineNum, $name ] = $nameInfo;
 	$ips = gethostbynamel( $name );
 	if ( $ips === false ) {
 		echo "Not a valid host or IP address on line $lineNum: $name\n";
@@ -71,7 +71,7 @@ echo "\n";
 echo "Creating database...\n";
 $hostsDB = [];
 foreach ( $ranges as $i => $range ) {
-	list( $lineNum, $start, $end ) = $range;
+	[ $lineNum, $start, $end ] = $range;
 
 	if ( $start === $end ) {
 		// Single host
@@ -87,24 +87,29 @@ foreach ( $ranges as $i => $range ) {
 			break;
 		}
 	}
-	if ( $length == 0 || ( substr( $start, 0, 3 ) == 'v6-' && $length == 3 ) ) {
+	if ( $length === 0 || ( strpos( $start, 'v6-' ) === 0 && $length === 3 ) ) {
 		echo "Range too big on line $lineNum\n";
 		continue;
 	}
 	$prefix = substr( $start, 0, $length );
 	$suffixLength = strlen( $start ) - $length;
-	$startNum = floatval( base_convert( substr( $start, $length ), 16, 10 ) );
-	$endNum = floatval( base_convert( substr( $end, $length ), 16, 10 ) );
+	$startNum = (float)base_convert( substr( $start, $length ), 16, 10 );
+	$endNum = (float)base_convert( substr( $end, $length ), 16, 10 );
+
+	// There are 8192 IP addresses in an IPv4 /19; so this means anything larger than a /19
+	// (such as a /18 which has 16,832 IPv4 addresses) cannot be used.
 	if ( $endNum - $startNum > 8192 ) {
 		echo "Range too big on line $lineNum\n";
 		echo "TrustedXFF has not yet been optimised for large ranges.\n";
 		continue;
 	}
-	if ( $endNum > pow( 2, 52 ) ) {
+
+	if ( $endNum > ( 2 ** 52 ) ) {
 		// This is unreachable unless someone tweaks some constants above
 		echo "Loss of precision in floating point number, will cause infinite loop.\n";
 		continue;
 	}
+
 	for ( $j = $startNum; $j <= $endNum; $j++ ) {
 		$hex = strtoupper( base_convert( $j, 10, 16 ) );
 		$hex = str_pad( $hex, $suffixLength, '0', STR_PAD_LEFT );
