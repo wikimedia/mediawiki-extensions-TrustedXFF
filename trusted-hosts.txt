@@ -33,22 +33,6 @@
 205.188.146.144/30
 207.200.112.0/21
 
-
-# British Columbia school network
-# Source: email
-vicce005.net.gov.bc.ca.
-vicce006.net.gov.bc.ca.
-vicce007.net.gov.bc.ca.
-vicce008.net.gov.bc.ca.
-vicce009.net.gov.bc.ca.
-vicce010.net.gov.bc.ca.
-vicce011.net.gov.bc.ca.
-vance001.net.gov.bc.ca.
-vance002.net.gov.bc.ca.
-vance003.net.gov.bc.ca.
-vance004.net.gov.bc.ca.
-
-
 # NTL
 # Originally from http://ben.cheetham.me.uk/resources/net/ntl-proxy-list
 # with some of our own additions
@@ -418,73 +402,6 @@ cache03.nyc.untd.com.
 cache04.nyc.untd.com.
 cache05.nyc.untd.com.
 cache06.nyc.untd.com.
-accel001.iad.untd.com.
-accel002.iad.untd.com.
-accel003.iad.untd.com.
-accel004.iad.untd.com.
-accel005.iad.untd.com.
-accel006.iad.untd.com.
-accel007.iad.untd.com.
-accel008.iad.untd.com.
-accel009.iad.untd.com.
-accel010.iad.untd.com.
-accel011.iad.untd.com.
-accel012.iad.untd.com.
-accel013.iad.untd.com.
-accel014.iad.untd.com.
-accel015.iad.untd.com.
-accel016.iad.untd.com.
-accel017.iad.untd.com.
-accel018.iad.untd.com.
-accel019.iad.untd.com.
-accel020.iad.untd.com.
-accel021.iad.untd.com.
-accel022.iad.untd.com.
-accel023.iad.untd.com.
-accel024.iad.untd.com.
-accel025.iad.untd.com.
-accel026.iad.untd.com.
-accel027.iad.untd.com.
-accel029.iad.untd.com.
-accel030.iad.untd.com.
-accel031.iad.untd.com.
-accel032.iad.untd.com.
-accel033.iad.untd.com.
-accel034.iad.untd.com.
-accel035.iad.untd.com.
-accel036.iad.untd.com.
-accel037.iad.untd.com.
-accel038.iad.untd.com.
-accel039.iad.untd.com.
-accel040.iad.untd.com.
-accel041.iad.untd.com.
-accel042.iad.untd.com.
-accel043.iad.untd.com.
-accel044.iad.untd.com.
-accel045.iad.untd.com.
-accel046.iad.untd.com.
-accel047.iad.untd.com.
-accel048.iad.untd.com.
-accel049.iad.untd.com.
-accel050.iad.untd.com.
-accel051.iad.untd.com.
-accel052.iad.untd.com.
-accel053.iad.untd.com.
-accel054.iad.untd.com.
-accel055.iad.untd.com.
-accel056.iad.untd.com.
-accel057.iad.untd.com.
-accel058.iad.untd.com.
-accel059.iad.untd.com.
-accel060.iad.untd.com.
-accel061.iad.untd.com.
-accel062.iad.untd.com.
-accel063.iad.untd.com.
-accel064.iad.untd.com.
-accel065.iad.untd.com.
-accel066.iad.untd.com.
-accel067.iad.untd.com.
-accel110.iad.untd.com.
 
 # Opera Mini
 # Source: https://list.opera.com/mailman/listinfo/net-changes-mini
@@ -656,9 +573,6 @@ filter11.solcon.nl.
 213.228.0.12
 213.228.0.86
 
-# tpnet.pl DNS-RR
-w3cache.tpnet.pl.
-
 # maxonline.com.sg (starhub.com)
 218.186.9.1
 202.156.10.9
@@ -781,34 +695,6 @@ do-lb-a01.isp.t-ipnet.de.
 208.87.237.201
 208.87.238.180
 208.87.239.180
-
-# Yandex.Turbo (similar to Opera Mini)
-# Source: email, logs, reverse DNS
-trbo01d.trbo.yandex.net
-trbo02d.trbo.yandex.net
-trbo03d.trbo.yandex.net
-trbo04d.trbo.yandex.net
-trbo05d.trbo.yandex.net
-trbo06d.trbo.yandex.net
-trbo07d.trbo.yandex.net
-trbo08d.trbo.yandex.net
-trbo09d.trbo.yandex.net
-trbo10d.trbo.yandex.net
-trbo11d.trbo.yandex.net
-trbo12d.trbo.yandex.net
-trbo13d.trbo.yandex.net
-trbo14d.trbo.yandex.net
-trbo15d.trbo.yandex.net
-trbo16d.trbo.yandex.net
-trbo17d.trbo.yandex.net
-trbo18d.trbo.yandex.net
-trbo19d.trbo.yandex.net
-trbo20d.trbo.yandex.net
-trbo21d.trbo.yandex.net
-trbo22d.trbo.yandex.net
-trbo23d.trbo.yandex.net
-trbo24d.trbo.yandex.net
-trbo25d.trbo.yandex.net
 
 # Zscaler
 # Source: email, T298241
