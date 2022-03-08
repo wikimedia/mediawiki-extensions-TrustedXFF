@@ -96,9 +96,9 @@ foreach ( $ranges as $i => $range ) {
 	$startNum = (float)base_convert( substr( $start, $length ), 16, 10 );
 	$endNum = (float)base_convert( substr( $end, $length ), 16, 10 );
 
-	// There are 8192 IP addresses in an IPv4 /19; so this means anything larger than a /19
-	// (such as a /18 which has 16,832 IPv4 addresses) cannot be used.
-	if ( $endNum - $startNum > 8192 ) {
+	// There are 131,072 IP addresses in an IPv4 /15; so this means anything larger than a /15
+	// (such as a /14 which has 262,144 IPv4 addresses) cannot be used.
+	if ( $endNum - $startNum > 131072 ) {
 		echo "Range too big on line $lineNum\n";
 		echo "TrustedXFF has not yet been optimised for large ranges.\n";
 		continue;
