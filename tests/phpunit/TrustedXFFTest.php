@@ -11,6 +11,8 @@ class TrustedXFFTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::isTrusted
+	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::getInstance
+	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::onIsTrustedProxy
 	 */
 	public function testMissingXffFileIsHandledGracefully() {
 		$ip = '127.0.0.2';
