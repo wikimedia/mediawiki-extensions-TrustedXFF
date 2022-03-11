@@ -22,11 +22,19 @@ class TrustedXFF {
 		'2001:4c28:3000::/36'
 	];
 
-	/** @var IPSet|null */
+	/** @var IPSet */
 	private $ipv6Set;
 
-	/** @var array|null */
+	/** @var array */
 	private $hosts;
+
+	/**
+	 * @param array $hosts List of IPv4 IPs
+	 */
+	private function __construct( array $hosts ) {
+		$this->hosts = $hosts;
+		$this->ipv6Set = new IPSet( self::IPV6_RANGES );
+	}
 
 	/**
 	 * @param string &$ip
@@ -42,11 +50,14 @@ class TrustedXFF {
 	}
 
 	/**
+	 * @codeCoverageIgnore
 	 * @return TrustedXFF
 	 */
-	private static function getInstance() {
+	public static function getInstance() {
 		if ( !self::$instance ) {
-			self::$instance = new TrustedXFF;
+			self::$instance = new TrustedXFF(
+				require dirname( __DIR__ ) . '/trusted-hosts.php'
+			);
 		}
 		return self::$instance;
 	}
@@ -55,11 +66,7 @@ class TrustedXFF {
 	 * @param string $ip
 	 * @return bool
 	 */
-	private function isTrusted( $ip ) {
-		if ( $this->hosts === null ) {
-			$this->hosts = require dirname( __DIR__ ) . '/trusted-hosts.php';
-		}
-
+	public function isTrusted( $ip ) {
 		// Try single host
 		$hex = IPUtils::toHex( $ip );
 		$data = $this->hosts[ $hex ] ?? null;
@@ -69,10 +76,6 @@ class TrustedXFF {
 
 		// Try IPv6 ranges
 		if ( strpos( $hex, 'v6' ) === 0 ) {
-			if ( $this->ipv6Set === null ) {
-				$this->ipv6Set = new IPSet( self::IPV6_RANGES );
-			}
-
 			return $this->ipv6Set->match( $ip );
 		}
 
