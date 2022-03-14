@@ -3,8 +3,6 @@
 #
 #     http://meta.wikimedia.org/wiki/XFF_project
 #
-# Note: IPv6 ranges cannot currently be listed in this file. They are
-# listed in TrustedXFF.body.php instead.
 
 # AOL
 # Source: http://webmaster.info.aol.com/proxyinfo.html
@@ -420,6 +418,11 @@ cache06.nyc.untd.com.
 185.26.180.0/22
 195.189.142.0/23
 209.170.68.0/24
+
+# Source: Email 22-May-2013
+2001:4c28:1::/48
+2001:4c28:2000::/36
+2001:4c28:3000::/36
 
 # OM On-Prem
 # Source 1: Email 22-May-2013

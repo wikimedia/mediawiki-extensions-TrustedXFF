@@ -41,11 +41,11 @@ class BenchmarkLookup extends Benchmarker {
 
 	public function execute() {
 		$ips = [
-			// IPv4 address from first range in list - 400C6000
+			// IPv4 address from first range in list
 			'64.12.96.0',
-			// IPv4 address from middle of list - 6BA773D7
+			// IPv4 address from middle of list
 			'107.167.115.215',
-			// Last IPv4 address in list - D9ED97CD
+			// Last IPv4 address in list
 			'217.237.151.205',
 			// IPv4 address not in list
 			'127.0.0.1',

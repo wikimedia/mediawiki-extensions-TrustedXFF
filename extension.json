@@ -3,9 +3,10 @@
 	"license-name": "GPL-2.0-or-later",
 	"url": "https://www.mediawiki.org/wiki/Extension:TrustedXFF",
 	"descriptionmsg": "trustedxff-desc",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"author": [
-		"Tim Starling"
+		"Tim Starling",
+		"Sam Reed"
 	],
 	"type": "other",
 	"requires": {
