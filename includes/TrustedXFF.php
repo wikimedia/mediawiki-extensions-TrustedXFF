@@ -29,6 +29,7 @@ class TrustedXFF {
 	private $hosts;
 
 	/**
+	 * @codeCoverageIgnore
 	 * @param array $hosts List of IPv4 IPs
 	 */
 	private function __construct( array $hosts ) {
