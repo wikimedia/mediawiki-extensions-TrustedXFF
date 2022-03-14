@@ -18,6 +18,7 @@
 namespace MediaWiki\Extension\TrustedXFF;
 
 use Benchmarker;
+use Wikimedia\RunningStat;
 use const RUN_MAINTENANCE_IF_MAIN;
 
 $IP = getenv( 'MW_INSTALL_PATH' );
@@ -50,7 +51,28 @@ class BenchmarkLookup extends Benchmarker {
 			'127.0.0.1',
 		];
 
+		$stat = new RunningStat();
+		$t = microtime( true );
 		$xff = TrustedXFF::getInstance();
+		$t = ( microtime( true ) - $t ) * 1000;
+
+		$stat->addObservation( $t );
+
+		// Copy pasta from Benchmarker.php
+		$this->addResult( [
+			'name' => 'setup',
+			'count' => $stat->getCount(),
+			// Get rate per second from mean (in ms)
+			'rate' => $stat->getMean() == 0 ? INF : ( 1.0 / ( $stat->getMean() / 1000.0 ) ),
+			'total' => $stat->getMean() * $stat->getCount(),
+			'mean' => $stat->getMean(),
+			'max' => $stat->max,
+			'stddev' => $stat->getStdDev(),
+			'usage' => [
+				'mem' => memory_get_usage( true ),
+				'mempeak' => memory_get_peak_usage( true ),
+			],
+		] );
 
 		$benches = [];
 		foreach ( $ips as $ip ) {
