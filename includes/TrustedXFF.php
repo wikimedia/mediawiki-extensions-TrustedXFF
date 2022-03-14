@@ -3,7 +3,6 @@
 namespace MediaWiki\Extension\TrustedXFF;
 
 use Wikimedia\IPSet;
-use Wikimedia\IPUtils;
 
 class TrustedXFF {
 	/**
@@ -11,30 +10,15 @@ class TrustedXFF {
 	 */
 	public static $instance;
 
-	// FIXME: IPv6 ranges need to be put here for now, there is no
-	// trusted-hosts.txt support. The ranges were too large to be expanded with
-	// the old CDB system.
-	private const IPV6_RANGES = [
-		// Opera Mini
-		// Source: Email 22-May-2013
-		'2001:4c28:1::/48',
-		'2001:4c28:2000::/36',
-		'2001:4c28:3000::/36'
-	];
-
 	/** @var IPSet */
-	private $ipv6Set;
-
-	/** @var array */
-	private $hosts;
+	private $ipSet;
 
 	/**
 	 * @codeCoverageIgnore
-	 * @param array $hosts List of IPv4 IPs
+	 * @param array $ips List of IPs and IP ranges
 	 */
-	private function __construct( array $hosts ) {
-		$this->hosts = $hosts;
-		$this->ipv6Set = new IPSet( self::IPV6_RANGES );
+	private function __construct( array $ips ) {
+		$this->ipSet = new IPSet( $ips );
 	}
 
 	/**
@@ -68,18 +52,6 @@ class TrustedXFF {
 	 * @return bool
 	 */
 	public function isTrusted( $ip ) {
-		// Try single host
-		$hex = IPUtils::toHex( $ip );
-		$data = $this->hosts[ $hex ] ?? null;
-		if ( $data ) {
-			return true;
-		}
-
-		// Try IPv6 ranges
-		if ( strpos( $hex, 'v6' ) === 0 ) {
-			return $this->ipv6Set->match( $ip );
-		}
-
-		return false;
+		return $this->ipSet->match( $ip );
 	}
 }
