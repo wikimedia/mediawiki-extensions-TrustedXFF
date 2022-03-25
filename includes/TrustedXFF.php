@@ -7,6 +7,7 @@ use Wikimedia\IPSet;
 class TrustedXFF {
 	/**
 	 * @internal For tests only
+	 * @var TrustedXFF
 	 */
 	public static $instance;
 

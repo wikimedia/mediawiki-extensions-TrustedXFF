@@ -36,7 +36,7 @@ while ( !feof( $inFile ) ) {
 	// Strip spaces
 	$line = trim( $line );
 
-	if ( $line == '' ) {
+	if ( $line === '' ) {
 		// Comment or blank line
 		continue;
 	}
@@ -82,6 +82,10 @@ file_put_contents(
 $count = count( $ranges );
 echo "$count ips or ranges listed\n";
 
+/**
+ * @param int $current
+ * @param int $total
+ */
 function showProgress( $current, $total ) {
 	$length = 50;
 	$dots = intval( ( $current + 1 ) / $total * $length );
