@@ -394,10 +394,6 @@ cache01.lax.untd.com.
 cache02.lax.untd.com.
 cache03.lax.untd.com.
 cache04.lax.untd.com.
-cache01.nyc.untd.com.
-cache02.nyc.untd.com.
-cache03.nyc.untd.com.
-cache04.nyc.untd.com.
 cache05.nyc.untd.com.
 cache06.nyc.untd.com.
 
