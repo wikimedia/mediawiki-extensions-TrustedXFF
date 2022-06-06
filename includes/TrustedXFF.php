@@ -16,10 +16,10 @@ class TrustedXFF {
 
 	/**
 	 * @codeCoverageIgnore
-	 * @param array $ips List of IPs and IP ranges
+	 * @param IPSet $set
 	 */
-	private function __construct( array $ips ) {
-		$this->ipSet = new IPSet( $ips );
+	private function __construct( IPSet $set ) {
+		$this->ipSet = $set;
 	}
 
 	/**
@@ -42,7 +42,9 @@ class TrustedXFF {
 	public static function getInstance() {
 		if ( !self::$instance ) {
 			self::$instance = new TrustedXFF(
-				require dirname( __DIR__ ) . '/trusted-hosts.php'
+				IPSet::newFromJson(
+					file_get_contents( dirname( __DIR__ ) . '/trusted-hosts.json' )
+				)
 			);
 		}
 		return self::$instance;
