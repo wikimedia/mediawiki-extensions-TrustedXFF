@@ -2,11 +2,13 @@
 
 use MediaWiki\Extension\TrustedXFF\TrustedXFF;
 
+/**
+ * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF
+ */
 class TrustedXFFTest extends MediaWikiUnitTestCase {
 
 	protected function setUp(): void {
 		parent::setup();
-		TrustedXFF::$instance = null;
 	}
 
 	public function provideIPs() {
@@ -20,14 +22,10 @@ class TrustedXFFTest extends MediaWikiUnitTestCase {
 
 	/**
 	 * @dataProvider provideIPs
-	 *
-	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::isTrusted
-	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::getInstance
-	 * @covers MediaWiki\Extension\TrustedXFF\TrustedXFF::onIsTrustedProxy
 	 */
 	public function testisTrusted( $ip, $expectedTrusted, $msg ) {
 		$trusted = false;
-		TrustedXFF::onIsTrustedProxy( $ip, $trusted );
+		TrustedXFF::getInstance()->onIsTrustedProxy( $ip, $trusted );
 
 		$this->assertEquals( $expectedTrusted, $trusted, $msg );
 	}

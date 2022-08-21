@@ -20,10 +20,16 @@
 			"i18n"
 		]
 	},
+	"HookHandlers": {
+		"main": {
+			"factory": [
+				"MediaWiki\\Extension\\TrustedXFF\\TrustedXFF",
+				"getInstance"
+			]
+		}
+	},
 	"Hooks": {
-		"IsTrustedProxy": [
-			"MediaWiki\\Extension\\TrustedXFF\\TrustedXFF::onIsTrustedProxy"
-		]
+		"IsTrustedProxy": "main"
 	},
 	"manifest_version": 2
 }

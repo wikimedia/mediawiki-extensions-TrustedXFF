@@ -2,14 +2,14 @@
 
 namespace MediaWiki\Extension\TrustedXFF;
 
+use MediaWiki\Hook\IsTrustedProxyHook;
 use Wikimedia\IPSet;
 
-class TrustedXFF {
+class TrustedXFF implements IsTrustedProxyHook {
 	/**
-	 * @internal For tests only
 	 * @var TrustedXFF
 	 */
-	public static $instance;
+	private static $instance;
 
 	/** @var IPSet */
 	private $ipSet;
@@ -23,16 +23,14 @@ class TrustedXFF {
 	}
 
 	/**
-	 * @param string &$ip
+	 * @param string $ip
 	 * @param bool &$trusted
-	 * @return bool
 	 */
-	public static function onIsTrustedProxy( &$ip, &$trusted ) {
+	public function onIsTrustedProxy( $ip, &$trusted ) {
 		// Don't want to override hosts that are already trusted
 		if ( !$trusted ) {
-			$trusted = self::getInstance()->isTrusted( $ip );
+			$trusted = $this->isTrusted( $ip );
 		}
-		return true;
 	}
 
 	/**
