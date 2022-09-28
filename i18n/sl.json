@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dbc334"
+			"Dbc334",
+			"Eleassar"
 		]
 	},
-	"trustedxff-desc": "Ravnanje s seznamom zaupanja vrednih naslovov proxy ([https://meta.wikimedia.org/wiki/XFF_project projekt XFF])"
+	"trustedxff-desc": "Ravnanje s seznamom zaupanja vrednih posredniških naslovov ([https://meta.wikimedia.org/wiki/XFF_project projekt XFF])"
 }
