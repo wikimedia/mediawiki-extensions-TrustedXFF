@@ -110,6 +110,10 @@ class Generate extends Maintenance {
 			( $current + 1 ) / $total * 100
 		);
 	}
+
+	public function canExecuteWithoutLocalSettings(): bool {
+		return true;
+	}
 }
 
 $maintClass = Generate::class;
