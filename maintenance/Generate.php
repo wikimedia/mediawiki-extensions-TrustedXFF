@@ -5,7 +5,6 @@ namespace MediaWiki\Extension\TrustedXFF;
 use Maintenance;
 use Wikimedia\IPSet;
 use Wikimedia\IPUtils;
-use Wikimedia\StaticArrayWriter;
 
 require_once getenv( 'MW_INSTALL_PATH' ) !== false
 	? getenv( 'MW_INSTALL_PATH' ) . '/maintenance/Maintenance.php'
@@ -16,9 +15,11 @@ class Generate extends Maintenance {
 		parent::__construct();
 		$this->addDescription( 'Generates the PHP/JSON XFF file from the trusted-hosts.txt file' );
 		$this->requireExtension( 'TrustedXFF' );
+		$this->addOption( 'outdir', 'The output directory, default ' . dirname( __DIR__ ) );
 	}
 
 	public function execute() {
+		$outDir = $this->getOption( 'outdir', dirname( __DIR__ ) );
 		$inFileName = dirname( __DIR__ ) . '/trusted-hosts.txt';
 		$inFile = fopen( $inFileName, 'r' );
 		if ( !$inFile ) {
@@ -83,14 +84,18 @@ class Generate extends Maintenance {
 			gmdate( 'c' )
 		);
 
-		$writer = new StaticArrayWriter();
+		$out = "<" . "?php\n" . preg_replace( '/^/m', '# ', $header ) . "\nreturn [\n";
+		foreach ( $ranges as $range ) {
+			$out .= "\t" . var_export( $range, true ) . ",\n";
+		}
+		$out .= "];\n";
 		file_put_contents(
-			dirname( __DIR__ ) . '/trusted-hosts.php',
-			$writer->create( $ranges, $header )
+			"$outDir/trusted-hosts.php",
+			$out
 		);
 
 		file_put_contents(
-			dirname( __DIR__ ) . '/trusted-hosts.json',
+			"$outDir/trusted-hosts.json",
 			json_encode( new IPSet( $ranges ) )
 		);
 
