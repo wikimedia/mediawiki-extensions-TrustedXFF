@@ -11,7 +11,7 @@ class TrustedXFFTest extends MediaWikiUnitTestCase {
 		parent::setup();
 	}
 
-	public function provideIPs() {
+	public static function provideIPs() {
 		return [
 			[ '64.12.96.1', true, "IPv4 address trusted because it's in the AOL range 64.12.96.0/19" ],
 			[ '127.0.0.2', false, 'IPv4 address not trusted' ],
