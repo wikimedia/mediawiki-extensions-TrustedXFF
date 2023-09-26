@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Assele"
+			"Assele",
+			"З. ӘЙЛЕ"
 		]
 	},
-	"trustedxff-desc": "Ышаныслы прокси адрестар исемлеген эшкәртеү ([https://meta.wikimedia.org/wiki/XFF_project XFF проекты])"
+	"trustedxff-desc": "Ышаныслы прокси-адрестар исемлеген эшкәртеү ([https://meta.wikimedia.org/wiki/XFF_project XFF проекты])"
 }
