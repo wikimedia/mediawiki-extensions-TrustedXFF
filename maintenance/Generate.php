@@ -14,8 +14,9 @@ class Generate extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 		$this->addDescription( 'Generates the PHP/JSON XFF file from the trusted-hosts.txt file' );
-		$this->requireExtension( 'TrustedXFF' );
 		$this->addOption( 'outdir', 'The output directory, default ' . dirname( __DIR__ ) );
+
+		// This script does not require the extension to be installed
 	}
 
 	public function execute() {
