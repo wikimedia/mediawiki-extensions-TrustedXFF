@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\TrustedXFF;
 
-use Maintenance;
+use MediaWiki\Maintenance\Maintenance;
 use Wikimedia\IPSet;
 use Wikimedia\IPUtils;
 

@@ -17,7 +17,7 @@
 
 namespace MediaWiki\Extension\TrustedXFF;
 
-use Benchmarker;
+use MediaWiki\Maintenance\Benchmarker;
 use Wikimedia\RunningStat;
 use const RUN_MAINTENANCE_IF_MAIN;
 
