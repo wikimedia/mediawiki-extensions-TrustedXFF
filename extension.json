@@ -10,7 +10,7 @@
 	],
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.43"
+		"MediaWiki": ">= 1.44"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\TrustedXFF\\": "includes/"
