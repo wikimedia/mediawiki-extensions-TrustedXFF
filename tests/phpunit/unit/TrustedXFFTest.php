@@ -7,10 +7,6 @@ use MediaWiki\Extension\TrustedXFF\TrustedXFF;
  */
 class TrustedXFFTest extends MediaWikiUnitTestCase {
 
-	protected function setUp(): void {
-		parent::setup();
-	}
-
 	public static function provideIPs() {
 		return [
 			[ '64.12.96.1', true, "IPv4 address trusted because it's in the AOL range 64.12.96.0/19" ],
