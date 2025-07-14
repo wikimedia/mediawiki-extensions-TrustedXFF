@@ -6,9 +6,11 @@ use MediaWiki\Maintenance\Maintenance;
 use Wikimedia\IPSet;
 use Wikimedia\IPUtils;
 
+// @codeCoverageIgnoreStart
 require_once getenv( 'MW_INSTALL_PATH' ) !== false
 	? getenv( 'MW_INSTALL_PATH' ) . '/maintenance/Maintenance.php'
 	: __DIR__ . '/../../../maintenance/Maintenance.php';
+// @codeCoverageIgnoreEnd
 
 class Generate extends Maintenance {
 	public function __construct() {
@@ -122,5 +124,7 @@ class Generate extends Maintenance {
 	}
 }
 
+// @codeCoverageIgnoreStart
 $maintClass = Generate::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
+// @codeCoverageIgnoreEnd

@@ -21,11 +21,13 @@ use MediaWiki\Maintenance\Benchmarker;
 use Wikimedia\RunningStat;
 use const RUN_MAINTENANCE_IF_MAIN;
 
+// @codeCoverageIgnoreStart
 $IP = getenv( 'MW_INSTALL_PATH' );
 if ( $IP === false ) {
 	$IP = __DIR__ . '/../../..';
 }
 require_once "$IP/maintenance/includes/Benchmarker.php";
+// @codeCoverageIgnoreEnd
 
 /**
  * Benchmark the TrustedXFF Lookup
@@ -90,5 +92,7 @@ class BenchmarkLookup extends Benchmarker {
 	}
 }
 
+// @codeCoverageIgnoreStart
 $maintClass = BenchmarkLookup::class;
 require_once RUN_MAINTENANCE_IF_MAIN;
+// @codeCoverageIgnoreEnd
